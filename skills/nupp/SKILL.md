@@ -1,10 +1,10 @@
 ---
-name: adv-nupp
+name: nupp
 description: |
   Project advisor using the NUPP meta-system (Nearly Universal Principles of Projects).
   Guides diagnosis and improvement of any project situation using 6 universal principles
   that underlie PRINCE2, PMBOK, P3.express, DSDM, Scrum, and XP.
-  Invoke via /advisors:adv-nupp with the project situation.
+  Invoke via /nupp with the project situation.
   English triggers: project is struggling, project diagnosis, which methodology,
   agile vs waterfall, tailoring a methodology, team energy is low, purposeless
   ceremonies, planning debate, ad hoc process, "we follow Scrum but it is not working".
@@ -12,8 +12,8 @@ description: |
   agile или waterfall, адаптировать методологию, команда выгорает, бессмысленные
   ритуалы, спор о планировании, нет процессов, «у нас Scrum, но не работает».
   DO NOT TRIGGER when: personal or business decision without a project
-  (use /advisors:adv-Decision); product strategy, pricing, PMF
-  (use /advisors:adv-product); marketing or audience growth (use /advisors:adv-influence).
+  (use /advisor-decision); product strategy, pricing, PMF
+  (use /advisor-product); marketing or audience growth (use /advisor-influence).
 user-invocable: true
 argument-hint: "<the project situation, symptom or methodology question>"
 allowed-tools:
@@ -32,7 +32,7 @@ model: opus
 
 ```
 PLUGIN_ROOT = ${CLAUDE_PLUGIN_ROOT}
-MEMORY_DIR  = ${user_config.ADVISORS_MEMORY_DIR}
+MEMORY_DIR  = ${user_config.MEMORY_DIR}
 PROFILE     = {MEMORY_DIR}/Профили/adv-nupp.md
 ```
 
@@ -40,7 +40,7 @@ Run this gate before anything else, every time:
 
 1. `MEMORY_DIR` empty, or the literal text `${user_config` visible in it → say so and continue
    **without memory**: this advisor still works, it just will not remember the session.
-   To fix it: `/plugin` → advisors → settings → `ADVISORS_MEMORY_DIR`, or
+   To fix it: `/plugin` → nupp → settings → `MEMORY_DIR`, or
    `/plugin configure advisors@<marketplace>`.
 2. Path starts with `~/` → replace `~` with `$HOME` before any write.
 3. Unpack the skeleton once (idempotent, never overwrites existing files):

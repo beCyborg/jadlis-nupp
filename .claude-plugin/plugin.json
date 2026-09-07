@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "nupp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "displayName": "Диагностика проекта по NUPP",
   "description": "Советник по проектам на мета-системе NUPP (Nearly Universal Principles of Projects): шесть универсальных принципов под PRINCE2, PMBOK, P3.express, DSDM, Scrum и XP — диагноз ситуации и что менять.",
   "author": {

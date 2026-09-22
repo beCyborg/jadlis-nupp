@@ -23,7 +23,7 @@ allowed-tools:
   - Glob
   - Bash
   - AskUserQuestion
-model: opus
+model: claude-opus-5-5
 ---
 
 # NUPP Project Advisor

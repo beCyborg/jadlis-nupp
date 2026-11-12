@@ -5,6 +5,21 @@
 
 ## [Unreleased]
 
+## [1.1.0] — 2026-11-12 — Принципы как правила сессии агента и сверка / Principles as agent session rules and a check
+
+### Для человека
+
+- Новая команда `/nupp:guide` подключает шесть принципов как постоянные правила сессии: агент сверяется с ними, когда берёт задачу, перед дорогим шагом и перед словом «готово». Менеджер сессий получает правила выдачи задачи и приёмки отчёта.
+- Новая команда `/nupp:check` сверяет план, задание, отчёт или решение с принципами и возвращает только нарушения: где, чем грозит, как поправить.
+- Справочники диагноза заменены оригинальным текстом руководства NUPP от OMIMO (CC BY 4.0) с указанием источника. Диагноз проекта `/nupp` работает как раньше.
+
+### For agents
+
+- Added: `skills/guide/SKILL.md` (standing instructions, sized to survive compaction: under 5,000 tokens), `skills/check/SKILL.md` (read-only lint, `allowed-tools: Read, Glob, Grep`), `skills/nupp/references/nupp-introduction.md`, `evals/` (native `claude plugin eval` suite), own `NOTICE.md`.
+- Changed: `skills/nupp/references/nup1…nup6-*.md` — model-written digests replaced by the verbatim NUPP manual v1 (OMIMO, generated 2026-10-26), one file per principle; `skills/nupp/SKILL.md` — attribution, routes to `/nupp:guide` and `/nupp:check`, two phrases that pointed at removed digest sections.
+- Changed: `.claude-plugin/plugin.json` — display name, description, keywords.
+- Migration: none. `/nupp` and the `MEMORY_DIR` key are unchanged. Preload into a subagent: `skills: [nupp:guide]`.
+
 ## [1.0.3] — 2026-09-22 — Переход на Opus 5.5 / Switch to Opus 5.5
 
 ### Для человека

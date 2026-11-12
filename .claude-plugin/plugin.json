@@ -1,9 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "nupp",
-  "version": "1.0.3",
-  "displayName": "Диагностика проекта по NUPP",
-  "description": "Советник по проектам на мета-системе NUPP (Nearly Universal Principles of Projects): шесть универсальных принципов под PRINCE2, PMBOK, P3.express, DSDM, Scrum и XP — диагноз ситуации и что менять.",
+  "version": "1.1.0",
+  "displayName": "NUPP: принципы для агента и диагноз проекта",
+  "description": "Шесть принципов NUPP (Nearly Universal Principles of Projects) в трёх формах: постоянные правила сессии агента (/nupp:guide), сверка плана, отчёта или решения с выдачей только нарушений (/nupp:check) и диагноз проекта с командой (/nupp). Внутри — оригинальный текст руководства OMIMO NUPP (CC BY 4.0).",
   "author": {
     "name": "Be Cyborg"
   },
@@ -14,7 +14,9 @@
     "advisor",
     "project-management",
     "nupp",
-    "agile"
+    "agile",
+    "agent-principles",
+    "manager"
   ],
   "userConfig": {
     "MEMORY_DIR": {

@@ -13,7 +13,9 @@ description: |
   ритуалы, спор о планировании, нет процессов, «у нас Scrum, но не работает».
   DO NOT TRIGGER when: personal or business decision without a project
   (use /advisor-decision); product strategy, pricing, PMF
-  (use /advisor-product); marketing or audience growth (use /advisor-influence).
+  (use /advisor-product); marketing or audience growth (use /advisor-influence);
+  an agent session should work by the principles (use /nupp:guide); one plan, report or
+  decision of an agent should be checked (use /nupp:check).
 user-invocable: true
 argument-hint: "<the project situation, symptom or methodology question>"
 allowed-tools:
@@ -57,6 +59,8 @@ Substitute the values yourself.
 ## Purpose
 
 Provide procedural diagnostic knowledge from the NUPP meta-system — a set of 6 nearly universal principles that underlie ALL major PM methodologies. This advisor applies all 6 NUPs simultaneously as diagnostic lenses to any project situation, revealing root causes that methodology-specific thinking misses. Claude does not have this specific diagnostic framework from general training.
+
+Some of this content is adapted from OMIMO's NUPP (https://omimo.org/), used under the Creative Commons Attribution license; OMIMO does not endorse this adaptation. The files in `references/` hold the original text of the NUPP manual, one file per principle.
 
 ## When to Use
 
@@ -110,7 +114,7 @@ Apply ALL 6 NUPs simultaneously as diagnostic lenses. For each NUP, assess the s
 
 **NUP2 — Energy**: Is mental energy being wasted on unnecessary decisions, interpersonal conflicts, or micro-management? Is the team working at sustainable pace? Is there decision fatigue at management level? See `references/nup2-energy.md`.
 
-**NUP3 — Proactivity**: Are they reacting to problems or anticipating them? Is there proactive planning at all three levels? Are risks being managed or just discovered? Are roles defined or emerging chaotically? See `references/nup3-proactivity.md`.
+**NUP3 — Proactivity**: Are they reacting to problems or anticipating them? Is there planning before execution, a plan of how to plan, and replanning as reality diverges? Are risks being managed or just discovered? Are roles defined or emerging chaotically? See `references/nup3-proactivity.md`.
 
 **NUP4 — Weakest Link**: Is attention focused on one domain (e.g., time) while others are neglected? Is the methodology cherry-picked from multiple sources without holistic consideration? Are human aspects and processes balanced? See `references/nup4-weakest-link.md`.
 
@@ -162,7 +166,7 @@ Rate each cell as Strong / Moderate / Weak for the user's specific project conte
 On EVERY recommendation:
 
 1. **Name alternatives**: Briefly note 1-2 other approaches considered and why this one fits better
-2. **Cite the NUP**: "According to NUP3 (proactivity), specifically the planning levels framework from `references/nup3-proactivity.md`..."
+2. **Cite the NUP**: "According to NUP3 (proactivity), specifically the «Continuous planning» example in `references/nup3-proactivity.md`..."
 3. **Bind to context**: Not abstract advice — "For your Scrum-based IT project with a fixed deadline, this means..."
 4. **Flag anti-patterns**: If the user's approach matches a known NUPP anti-pattern (method tribalism, cherry picking, anti-process fallacy, purposeless activities, reactive management, ad hoc everything), name it explicitly and explain why it fails
 
@@ -185,6 +189,8 @@ On EVERY recommendation:
    advisor too.
 
 ## Reference Navigation
+
+Each file is the original manual text of one principle: its statement and its worked examples. The diagnostic questions live in Step 2 above, the anti-pattern names in the Reasoning Protocol. `references/nupp-introduction.md` gives the frame and the list of compatible methods.
 
 | User's Situation | Start Here | Then Read |
 |-----------------|-----------|-----------|
